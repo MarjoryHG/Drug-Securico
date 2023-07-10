@@ -1,0 +1,755 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  background-color: #f9f9f9;
+}
+
+.sidebar {
+  flex: 3;
+}
+
+.main-content {
+  flex: 2;
+  padding: 25px;
+  background-color: white;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* Estilos de la tabla de datos */
+.sidebar .data-table {
+  max-height: 500px; /* Ajusta la altura máxima según tus necesidades */
+  overflow-y: auto;
+  margin-left: 78px; /* Ajusta el margen izquierdo según tus necesidades */
+ 
+}
+
+
+
+table {
+  border-spacing: 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.data-table {
+  width: 85%;
+  table-layout: fixed;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.data-table td {
+  padding: 8px;
+  border-bottom: 2px solid #ddd;
+  min-height: 40px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.data-table th .title-cell {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.table-row {
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.table-cell {
+  width: 150px;
+  background-color: white;
+  padding: 20px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+.table-cell span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+.table-cell strong {
+  color: gray;
+  font-size: 14px;
+  
+}
+
+
+.title-cell {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  
+  
+}
+
+.content-cell {
+  display: block;
+  margin-top: 2px;
+  
+}
+
+
+.delete-medication {
+  color: rgb(0, 0, 0); 
+  margin-left: 100px;
+}
+
+
+.table-cell.name-cell {
+  width: 200px; 
+  white-space: normal; 
+}
+
+.table-cell.top-brand-cell {
+  width: 200px; 
+  white-space: normal; 
+}
+
+.table-cell.type-cell {
+  width: 150px; 
+  white-space: normal; 
+}
+
+.table-cell.priority-cell {
+  width: 50px; 
+  white-space: normal; 
+}
+
+
+
+/* Estilos para la paginación */
+.pagination {
+  background-color: #f5f5f5;
+  height: 70px;
+}
+
+.pagination a {
+  display: inline-block;
+  background-color: #02c4c7;
+  border: none;
+  border-radius: 10px;
+  width: 70px;
+  height: 50px;
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  line-height: 50px;
+  margin-right: 100px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 250px;
+}
+
+.pagination a:hover {
+  background-color: #05fbff;
+}
+
+
+
+/* Estilos para el encabezado */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  height: 100px;
+  width: 96%;
+  border-bottom: 2px solid #ccc;
+  background-color: #f5f5f5;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.title {
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #0E3544;
+  margin-right: 100px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  max-width: 200px;
+  background-image: url(/images/busqueda-de-lupa.png);
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-left: 40px;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+#search-input {
+  width: 100%;
+  height: 50%;
+}
+
+.priority-value {
+  color: blue;
+}
+
+/* Estilos para el botón Update */
+.update-btn {
+  margin-left: 50px;
+  background-color: #02c4c7;
+  border: none;
+  border-radius: 10px;
+  width: 10%;
+  height: 45px;
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.update-btn:hover {
+  background-color: #0E3544;
+}
+
+
+/* Estilos Drug Details */
+
+.drug-details {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  
+}
+
+.drug-details p:first-child {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.drug-details p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.drug-details button {
+  background-color: #02c4c7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  
+}
+
+.drug-details button:hover {
+  background-color: #0E3544;
+}
+
+#details-content {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para Drug Priority */
+
+#drug-priority {
+  color: #2196f3;
+  font-weight: bold;
+}
+
+/* Estilos para Edit Button */
+
+.edit-btn {
+  background-color: #f7f7f7;
+  color: #2196f3;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  float: right;
+  margin-top: -20px;
+}
+
+.edit-btn i {
+  margin-right: 5px;
+}
+
+.edit-btn:hover {
+  background-color: #ccc;
+}
+
+
+
+/* Estilos Saved List */
+
+.saved-list {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.title-saved {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.saved-medication {
+  margin-bottom: 10px;
+}
+
+.saved-medication .medication-name {
+  font-weight: bold;
+}
+
+.saved-medication .medication-details {
+  margin-top: 5px;
+}
+
+.saved-medication .delete-medication {
+  float: right;
+  color: #0E3544;
+  cursor: pointer;
+}
+
+
+
+#pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#pagination-container a {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #e0e0e0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+#pagination-container a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#pagination-container .active {
+  background-color: #333;
+  color: #fff;
+}
+
+
+.current-page {
+  font-weight: bolder;
+  color: darkblue;
+  
+}
+
+/*1024*/
+@media (max-width: 1024px) { 
+  
+  .main-content {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 30vh;
+    width: 94%;
+    overflow-y: auto; /* Permite desplazamiento vertical */
+    transition: transform 0.8s ease; /* Agrega una transición suave al desplazamiento */
+    box-shadow: 0 0 5px #0E3544;
+    
+    
+    
+  }
+  
+  .main-content::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left:  10px;
+    width: 16px;
+    height: 16px;
+    background-image: url(./images/flecha.png);
+    background-size: cover;
+  }
+
+  .main-content.translate-up {
+    transform:  translateY(100%);
+
+    
+  }
+
+ 
+  .main-content.hidden {
+    transform: translateY(calc(-100% + 30vh));
+  }
+  
+
+  .data-table {
+    width: auto;
+    margin-right: 100px;
+   
+  }
+  
+  
+  .header { 
+    display: flex; align-items: center; justify-content: space-between; padding: 10px; 
+  }
+  
+  
+  .logo {
+    max-width: 150px;
+    height: auto;
+    margin-right: 5px;; 
+    }
+  
+  .title { 
+    font-size: 29px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #0E3544;
+    margin-right: 100px;
+    
+    
+  }
+  
+  .search-bar { 
+    max-height: 35px;
+    
+    max-width: 80px;
+    background-image: url(/images/busqueda-de-lupa.png);
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.3);
+    
+  }
+  
+  .update-btn { 
+    width: 80px; 
+    height: 40px; 
+    margin-right: 40px; 
+  }
+  
+  html {
+    background-color: #f9f9f9;
+  }
+
+}
+
+
+/*768*/
+@media (max-width: 768px) { 
+
+  .main-content {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 30vh;
+    width: 94%;
+    overflow-y: auto; /* Permite desplazamiento vertical */
+    transition: transform 0.8s ease; /* Agrega una transición suave al desplazamiento */
+    box-shadow: 0 0 5px #0E3544;
+    
+    
+    
+  }
+  
+  .main-content::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left:  10px;
+    width: 16px;
+    height: 16px;
+    background-image: url(./images/flecha.png);
+    background-size: cover;
+  }
+
+  .main-content.translate-up {
+    transform:  translateY(100%);
+
+    
+  }
+
+ 
+  .main-content.hidden {
+    transform: translateY(calc(-100% + 30vh));
+  }
+  
+
+  .data-table {
+    width: auto;
+    margin-right: 100px;
+   
+  }
+  
+  
+  .header { 
+    display: flex; align-items: center; justify-content: space-between; padding: 10px; 
+  }
+  
+  
+  .logo {
+    max-width: 150px;
+    height: auto;
+    margin-right: 5px;; 
+    }
+  
+  .title { 
+    font-size: 29px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #0E3544;
+    margin-right: 100px;
+    
+    
+  }
+  
+  .search-bar { 
+    max-height: 35px;
+    
+    max-width: 80px;
+    background-image: url(/images/busqueda-de-lupa.png);
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.3);
+    
+  }
+  
+  .update-btn { 
+    width: 80px; 
+    height: 40px; 
+    margin-right: 40px; 
+  }
+  
+  html {
+    background-color: #f9f9f9;
+  }
+
+}
+
+/*425*/
+@media (max-width: 425px) {
+  .data-table th:nth-child(3),
+  .data-table td:nth-child(3),
+  .data-table th:nth-child(4),
+  .data-table td:nth-child(4) {
+    display: none;
+  }
+
+  .main-content {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 30vh;
+    width: 100%;
+    overflow-y: auto;
+    transition: transform 0.8s ease;
+    box-shadow: 0 0 5px #0E3544;
+  }
+  
+  .main-content::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left:  10px;
+    width: 16px;
+    height: 16px;
+    background-image: url(./images/flecha.png);
+    background-size: cover;
+  }
+
+  .main-content.translate-up {
+    transform: translateY(100%);
+  }
+
+  .main-content.hidden {
+    transform: translateY(calc(-100% + 30vh));
+  }
+
+
+  #selection-form .data-table{
+    background-color: #f9f9f9;
+    width: 0px;
+    margin-left: 35px;
+    width: auto;
+  }
+
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    width: 135px;
+    
+    margin-bottom: 55px;
+    margin-right: 12px;
+  }
+
+  .title {
+    font-size: 27px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #0E3544;
+    margin-top: -140px;
+    
+    margin-left: 140px;    
+  }
+
+  .search-bar {
+    max-height: 35px;
+    max-width: 100px;
+    background-image: url(/images/busqueda-de-lupa.png);
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .update-btn {
+    width: 90px;
+    height: 50px;
+    margin-top: -85px;
+    margin-left: 300px;
+  }
+
+}
+
+
+/*375*/
+@media (max-width: 425px) {
+  .data-table th:nth-child(3),
+  .data-table td:nth-child(3),
+  .data-table th:nth-child(4),
+  .data-table td:nth-child(4), 
+  .data-table td:nth-child(10),
+  .data-table td:nth-child(10) {
+    display: none;
+  }
+
+  .main-content {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 30vh;
+    width: 100%;
+    overflow-y: auto;
+    transition: transform 0.8s ease;
+    box-shadow: 0 0 5px #0E3544;
+  }
+  
+  .main-content::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left:  10px;
+    width: 16px;
+    height: 16px;
+    background-image: url(./images/flecha.png);
+    background-size: cover;
+  }
+
+  .main-content.translate-up {
+    transform: translateY(100%);
+  }
+
+  .main-content.hidden {
+    transform: translateY(calc(-100% + 30vh));
+  }
+
+
+  #selection-form .data-table{
+    background-color: #f9f9f9;
+    width: 0px;
+    margin-left: 35px;
+    width: auto;
+  }
+
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    width: 135px;
+    margin-bottom: 55px;
+    margin-right: 12px;
+  }
+
+  .title {
+    font-size: 27px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #0E3544;
+    margin-top: -140px;
+    margin-left: 140px;
+  }
+
+  .search-bar {
+    max-height: 35px;
+    max-width: 80px;
+    background-image: url(/images/busqueda-de-lupa.png);
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .update-btn {
+    width: 90px;
+    height: 50px;
+    margin-top: -85px;
+    margin-left: 300px;
+  }
+}
+
+
+
+
+
+
+
+
